@@ -10,10 +10,8 @@ on:
 
 jobs:
   build:
-    name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
@@ -21,11 +19,9 @@ jobs:
       - run: yarn install
 
   publish-npm:
-    name: npm-publish
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
