@@ -1,7 +1,12 @@
 {
   "name": "my-own-library",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "lib",
+  "pearDependencies": {
+    "react": "<=16.0.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -17,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc -p .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +40,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierMolinaH/my-own-library.git"
+  },
+  "author": "JavierMolina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JavierMolinaH/my-own-library/issues"
+  },
+  "homepage": "https://github.com/JavierMolinaH/my-own-library#readme"
 }
